@@ -8,7 +8,7 @@ Here is a repository of my exploration with small ML projects! This repository i
 
 ### 1. Text-to-Image Generation (Stable Diffusion)
 
-A simple Python application that generates images from text prompts using [Stable Diffusion](https://huggingface.co/runwayml/stable-diffusion-v1-5) via the Hugging Face `diffusers` library. Unlike cloud-based APIs, this project runs the Stable Diffusion model locally on your GPU using PyTorch, giving full control and faster generation if you have CUDA available.
+A simple Python application that generates images from text prompts using [Stable Diffusion](https://huggingface.co/sd-legacy/stable-diffusion-v1-5) via the Hugging Face `diffusers` library. Unlike cloud-based APIs, this project runs the Stable Diffusion model locally on your GPU using PyTorch, giving full control and faster generation if you have CUDA available.
 
 **Features:**
 - Generate images from natural language prompts.
