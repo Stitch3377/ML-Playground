@@ -21,9 +21,9 @@ def save_image(image):
     if st.button("Save Image"):
         filename = verify_filename(filename) if filename else "my_image.png"
         image.save(filename)
-        st.success(f"Image saved as {filename}")
         st.session_state["show_save"] = False # Hide save options
         st.session_state.pop("generated_image", None) # Clear input field
+        st.session_state["filename_input"] = filename # Clear filename field
         st.rerun() # Rerun to clear input field
 
 def clear_input(key):
@@ -56,6 +56,7 @@ def main():
     # Saving option only if image has been generated and not saved yet
     if st.session_state.get('show_save', False) and 'generated_image' in st.session_state:
         save_image(st.session_state['generated_image'])
+        st.success(f"Image saved as {st.session_state.get('filename_input', 'my_image.png')}")
 
 if __name__ == "__main__":
     main()
