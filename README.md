@@ -19,16 +19,6 @@ A simple Python application that generates images from text prompts using [Stabl
 
 ---
 
-## 📅 Future Projects?
-
-* Image classification
-
-* AI agent text model
-
-* Whatever else seems like fun ✨
-
----
-
 ## 📚 Notes
 
 These projects are for learning and exploration only.
