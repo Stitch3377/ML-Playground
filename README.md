@@ -19,6 +19,16 @@ A simple Python application that generates images from text prompts using [Stabl
 
 ---
 
+## 📅 Future Projects?
+
+* Integrate image gen app with webhooks
+
+* Finetuning an LLM model
+
+* Whatever else seems fun!
+
+---
+
 ## 📚 Notes
 
 These projects are for learning and exploration only.
