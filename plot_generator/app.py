@@ -33,12 +33,13 @@ class AppModel:
 
 
 model = AppModel()
-
+st.set_page_config(page_title="Book Plot Generator", page_icon="📔", layout="centered")
+st.title("📔 Book Plot Generator")
 prompt = st.text_area("Enter the beginning of plot...")
 clicked = st.button("✨ Generate!")
 
-if clicked:
-    generated_email = model.generate(prompt)[0]
+if clicked and prompt.strip():
+    generated_plot = model.generate(prompt)[0]
 
     chat_message = st.chat_message("assistant")
-    chat_message.markdown(generated_email)
+    chat_message.markdown(generated_plot)
