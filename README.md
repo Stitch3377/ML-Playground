@@ -11,21 +11,22 @@ Here is a repository of my exploration with small ML projects! This repository i
 A simple Python application that generates images from text prompts using [Stable Diffusion](https://huggingface.co/sd-legacy/stable-diffusion-v1-5) via the Hugging Face `diffusers` library. Unlike cloud-based APIs, this project runs the Stable Diffusion model locally on your GPU using PyTorch, giving full control and faster generation if you have CUDA available.
 
 **Features:**
-- Generate images from natural language prompts.
-- Runs the model locally on your GPU (no API calls required).
-- Preview generated images directly.
-- Option to save images with a custom filename.
-- Run interactively in the terminal.
+- Generate images from natural language prompts
+- Runs the model locally on your GPU (no API calls required)
+- Preview generated images directly
+- Option to save images with a custom filename
+- Run interactively in the terminal or UI with Streamlit
 
----
 
-## 📅 Future Projects?
+### 2. Book Description Generator (Finetuning a GPT Model)
 
-* Integrate image gen app with webhooks
+This project explores LLMs using Hugging Face `transformers`, starting from a training notebook and culminating in a Streamlit web app that generates story plot ideas based on user prompts. The model used in this application is a fine-tuned [DistilGPT-2 model](https://huggingface.co/distilbert/distilgpt2) and is trained on the [Top 100 Goodreads Books' Descriptions from 1980 to 2023](https://www.kaggle.com/datasets/cristaliss/ultimate-book-collection-top-100-books-up-to-2023).
 
-* Finetuning an LLM model
-
-* Whatever else seems fun!
+**Features:**
+- Generate book plots from typing the beginning of a plot idea
+- Enter the beginning of a story idea and let the model complete it (e.g. *"In a distant galaxy, far far away..."*)
+- Runs locally using the fine-tuned GPT-2 checkpoint
+- Interactive UI with Streamlit
 
 ---
 
