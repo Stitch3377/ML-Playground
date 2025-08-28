@@ -16,6 +16,7 @@ A simple Python application that generates images from text prompts using [Stabl
 - Preview generated images directly
 - Option to save images with a custom filename
 - Run interactively in the terminal or UI with Streamlit
+- To run: `python -m streamlit run image_gen_app_streamlit.py`
 
 
 ### 2. Book Description Generator (Finetuning a GPT Model)
@@ -27,6 +28,7 @@ This project explores LLMs using Hugging Face `transformers`, starting from a tr
 - Enter the beginning of a story idea and let the model complete it (e.g. *"In a distant galaxy, far far away..."*)
 - Runs locally using the fine-tuned GPT-2 checkpoint
 - Interactive UI with Streamlit
+- To run: `streamlit run app.py`
 
 ---
 
