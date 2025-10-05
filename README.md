@@ -38,6 +38,10 @@ A Python-based AI agent that solves the Shape Placement Grid Game using stochast
 - No shapes overlap
 This project on applying local search techniques, commonly used in AI optimization problems, to a spatial reasoning and constraint satisfaction task. The shapes and colors are as shown below:
 
+![Gridgame Shapes](shape_coloring_solver/gridgame-shapes.png)
+
+![Gridgame Colors](shape_coloring_solver/gridgame-colors.png)
+
 **Features:**
 - Implements First-Choice Hill Climbing to iteratively improve the grid configuration
 - Integrates Simulated Annealing for probabilistic acceptance of worse states, enabling exploration beyond local maxima
