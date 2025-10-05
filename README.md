@@ -30,6 +30,27 @@ This project explores LLMs using Hugging Face `transformers`, starting from a tr
 - Interactive UI with Streamlit
 - To run: `streamlit run app.py`
 
+
+### 3. Shape Coloring Solver (Heuristic Local Search)
+A Python-based AI agent that solves the Shape Placement Grid Game using stochastic local search, simulated annealing, and random restarts. The objective of the game is to fill a grid entirely with colored geometric shapes such that:
+- All cells are covered with no empty space
+- No two adjacent cells share the same color
+- No shapes overlap
+This project on applying local search techniques, commonly used in AI optimization problems, to a spatial reasoning and constraint satisfaction task. The shapes and colors are as shown below:
+
+**Features:**
+- Implements First-Choice Hill Climbing to iteratively improve the grid configuration
+- Integrates Simulated Annealing for probabilistic acceptance of worse states, enabling exploration beyond local maxima
+- Uses Random Restarts to recover from stagnation when no improvement occurs after several iterations
+- Dynamically evaluates grid states using a custom heuristic function that penalizes: adjacent color conflicts, empty cells, excessive shape count, and unused colors
+
+**Algorithm Overview:**
+1. Randomly select an empty cell and attempt to place a valid shape and color.
+2. Evaluate the resulting grid using the heuristic function.
+3. If the move improves the heuristic score (or passes the simulated annealing probability test), accept it; otherwise, undo it.
+4. If no improvement occurs after 15–30 steps, partially or fully reset the board (random restart).
+5. Continue until all cells are filled and adjacency constraints are satisfied.
+
 ---
 
 ## 📚 Notes
