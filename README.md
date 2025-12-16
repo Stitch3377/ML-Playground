@@ -1,10 +1,10 @@
 # ML Playground
 
-Here is a repository of my exploration with small ML projects! This repository is a collection of small machine learning projects that I’m exploring for fun and to learn more about ML and LLMs! Each project lives in its own file/folder and focuses on experimenting with different ML concepts, libraries, or applications.  
+Here is a repository of my exploration with small ML projects! This repository is a collection of small machine learning projects that I’m exploring for fun and to learn more about ML and LLMs! Each project lives in its own folder and focuses on experimenting with different ML concepts, libraries, or applications. Using `Python 3.11.5`. Download requirements via `pip install -r requirements.txt`, preferably in its own virtual environment.
 
 ---
 
-## 📌 Projects
+## Projects
 
 ### 1. Text-to-Image Generation (Stable Diffusion)
 
@@ -56,11 +56,37 @@ This project on applying local search techniques, commonly used in AI optimizati
 4. If no improvement occurs after 15–30 steps, partially or fully reset the board (random restart).
 5. Continue until all cells are filled and adjacency constraints are satisfied.
 
----
 
-## 📚 Notes
+### 4. Escape the Castle (Q-Learning Reinforcement Learning)
+An implementation of Q-learning to train an AI agent to navigate through a partially observable grid-based environment. The agent must learn to escape a 7×7 castle grid by reaching the goal while avoiding guards, traps, and managing health.
 
-These projects are for learning and exploration only.
-I’m experimenting, breaking things, and documenting my progress here.
+**Game Mechanics**
+- Objective: Navigate from a random starting position to the goal at position (6,6)
+- Obstacles: Four guards with unique strength and keenness attributes, randomly moving each turn
+- Special Tiles: Trap tiles (damage health), heal tiles (restore health when using HEAL action)
+- Health System: Three states (Full, Injured, Critical) - reaching Critical ends the game
+- Partial Observability: Agent only observes a 3×3 window centered on its position
+- Actions: Movement (UP/DOWN/LEFT/RIGHT), combat (FIGHT/HIDE), utility (HEAL/WAIT)
 
-Feel free to explore, fork, or suggest fun ideas! 🚀
+**Technical Implementation**
+- Uses tabular Q-learning with episilon-greedy exploration
+- Custom state hashing function to mapa observations to unique IDs
+- Dynamic learning rate: $ \eta = \frac{1}{1 + \text{upates to } Q(s, a)}$
+- Trained for up to 5 million episodes with various decay rates
+
+**Features**
+- OpenAI Gym-compatible environment (`mdp_gym.py`)
+- PyGame visualization for observing agent behavior (`vis_gym.py`)
+- Comprehensive evaluation metrics: average reward, episode length, state coverage, action distributions, heatmap visualization of learned action preferences for different situations in `plots`
+- Analysis of how training time affects learned policies and exploration coverage
+
+**Key Results**
+- Agent learns to identify guard strengths and choose appropriate actions (fight vs hide)
+- Discovers optimal paths while managing health through heal tiles
+- Demonstrates improved performance with longer training and appropriate epsilon decay
+
+**To Run**
+- Training: `python3 Q_learning.py train`
+- Evaluation: `python3 Q_learning.py`
+- Visualization: `python3 Q_learning.py gui`
+- Manual play: `python3 vis_gym.py`
