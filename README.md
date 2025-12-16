@@ -90,3 +90,39 @@ An implementation of Q-learning to train an AI agent to navigate through a parti
 - Evaluation: `python3 Q_learning.py`
 - Visualization: `python3 Q_learning.py gui`
 - Manual play: `python3 vis_gym.py`
+
+### 5. Fashion-MNIST Classification (Neural Networks)
+A PyTorch implementation comparing feedforward and convolutional neural networks for classifying Fashion-MNIST images. This project explores how different neural network architectures process and learn from grayscale images of clothing items, achieving >80% accuracy on both models.
+
+**Dataset:**
+- 28×28 grayscale images of 10 clothing categories (t-shirt, trouser, pullover, dress, coat, sandal, shirt, sneaker, bag, ankle boot)
+- 60,000 training images and 10,000 test images
+
+**Models Implemented:**
+1. **Feedforward Neural Network (FFN)**
+   - Architecture: 784 → 512 → 256 → 128 → 10
+   - Fully connected layers with ReLU activation and dropout (0.2)
+   - Flattens 28×28 images into 1D vectors
+
+2. **Convolutional Neural Network (CNN)**
+   - Architecture: 3 conv blocks (1→32→64→128 channels) + 3 FC layers
+   - Each conv block: Conv2d → ReLU → MaxPool2d
+   - Progressively reduces spatial dimensions (28×28 → 14×14 → 7×7 → 3×3)
+   - Hierarchical feature extraction from edges to complex patterns
+
+**Features:**
+- Training with Adam optimizer and CrossEntropyLoss
+- Comprehensive evaluation metrics: accuracy, confusion matrices, training loss curves
+- Visualization of correct and incorrect predictions
+- Kernel visualization showing learned features at first convolutional layer
+- Feature map progression through CNN layers
+- Model comparison analysis (parameter counts, performance characteristics)
+
+**Key Results:**
+- Both models achieve >80% test accuracy
+- CNN demonstrates superior performance due to spatial feature learning
+- Visualization reveals hierarchical feature extraction: edges → textures → high-level patterns
+
+**To Run:**
+- Training: `python fashionmnist.py` (configure `TRAIN_FFN` and `TRAIN_CNN` flags)
+- Kernel visualization: `python kernel_vis.py`
