@@ -1,0 +1,2 @@
+FFN Total Parameters: 567,434
+CNN Total Parameters: 422,026
