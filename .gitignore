@@ -1,6 +1,9 @@
 # q_learning files
 q_learning/pickle
 
+# neural net files
+neural_net/data
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
